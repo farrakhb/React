@@ -6,8 +6,9 @@ class Fish extends React.Component{
         const { details } = this.props;
         const isAvailable = details.status === 'available';
         const buttonText = isAvailable? 'Add To Order' : 'Sold Out!';
+
         return(
-            <li className="menu-fish">
+            <li className="menue-fish">
                 <img src={this.props.details.image} alt={this.props.details.name}/>
                 <h3 className="fish-name">
                 {details.name}
@@ -15,6 +16,7 @@ class Fish extends React.Component{
             </h3>
             <p>{details.desc}</p>
             <button button={!isAvailable}>{buttonText}</button>
+            <button>Add To Order</button>
             </li>
         )
     }
